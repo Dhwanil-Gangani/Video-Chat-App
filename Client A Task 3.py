@@ -34,6 +34,7 @@ def send():
         server_socket = socket.socket()
         #To Reuse The Port Again
         server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
+        server_socket .setsockopt(socket.SOL_SOCKET,socket.SO_SNDTIMEO,200000)
         serverip = "192.168.0.103"
         serverport = 1412
         #Connect with Client B 
